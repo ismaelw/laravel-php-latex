@@ -1,0 +1,26 @@
+{
+    "name": "ismaelw/laravel-php-latex",
+    "description": "A latex package for laravel to generate pdfs",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mihir Bhende",
+            "email": "techsemicolon@gmail.com"
+        },{
+            "name": "Ismael Wismann",
+            "email": "ismael@wismann.ch"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.4",
+        "illuminate/support": "5.4.x|5.5.X|5.6.X|5.7.X|5.8.X|^6.0|^7.0|^8.0",
+        "illuminate/filesystem": "5.4.x|5.5.X|5.6.X|5.7.X|5.8.X|^6.0|^7.0|^8.0",
+        "symfony/process": "^2.0|^3.0|^4.0|^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ismaelw\\": "src/"
+        }
+    }
+}

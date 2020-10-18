@@ -1,0 +1,110 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% PLEASE, PREPARE YOUR PAPER ACCORDING TO THIS FILE
+%
+%%%%%%%%%% REQUIRED PACKAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The following packages are used in production. You can comment some of them,
+% if you do not have some of required files. Also, you can add additional
+% packages to handle pictures etc.
+\documentclass[8pt, one side]{scrartcl}
+\usepackage{amsfonts,epsfig}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage[english]{babel}
+\usepackage[default]{lato}
+\usepackage[T1]{fontenc}
+\usepackage[centertags]{amsmath}
+\usepackage{color,amssymb}
+\usepackage{amsthm}
+\usepackage[nodisplayskipstretch]{setspace}
+\usepackage{epstopdf}
+\usepackage{graphicx}
+\usepackage{newlfont}
+\usepackage{bigints}
+\usepackage{hyperref}
+\usepackage{hypcap}
+\usepackage{array}
+\usepackage[a4paper,left=1.7cm,right=2.2cm,top=1.85cm,bottom=1.5cm]{geometry}
+%\usepackage{fontawesome}
+
+                                    % comment if you have problem with print
+
+%\usepackage{amsthm}                % please use one of this two options for theorems
+	    % Journal is printed with poscript fonts:
+	                            % this package is essential for exact line and page breaks
+		                    % comment if you do not have this package
+	               	            %
+
+%%%%%%%%%% THEOREMS, LEMMAS, DEFINITIONS, ETC %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Theorem system is the standard one, you can use the one which is familiar to you
+% The style of numbering of theorems is left to author(s)
+% Change the following lines accordingly, but left definitions and remarks behind
+% \theoremstyle{definition}:
+\usepackage[absolute]{textpos}
+\usepackage{eso-pic}
+\usepackage{calc}
+
+\usepackage{parskip}
+\makeatletter\newcommand{\@minipagerestore}{\setstretch{1.3}}\makeatother
+
+\newcommand{\icon}[1]{% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
+	%\text{\textcolor{black}{\large\csname fa#1\endcsname}}% Icon and box
+	\text{#1}
+}
+%\includegraphics[scale=0.125]{Phone01}
+
+\newcommand\Wi{260mm}
+\newcolumntype{?}{!{\vrule width 2pt}}
+\definecolor{docPage}{HTML}{FFFFFF}
+\definecolor{docHeader}{HTML}{E6E6E6}
+\pagecolor{docPage}
+\begin{document}
+\textblockcolour{docHeader}
+\begin{textblock}{20}(0,0)
+\hfill\\[5cm]
+
+\end{textblock}
+
+  $$\begin{aligned}&{\Huge{\textbf{DAVID FOSTER}}} \\&\textcolor{gray}{\Large{\text{UI / UX DESIGNER}}}\end{aligned}\hspace{27em} \begin{aligned}&\icon{Phone}\,\,\text{\large{ 660-263-8238}}\\[0.2cm]&
+\icon{Envelope}\, \text{\large{ info@websiteurl.com}}\\[0.2cm]&
+{\makebox[8.5pt][l]{\hspace*{0cm}\raisebox{-0.3ex}{\icon{Home}}}}\, \text{\large{ 21 Jump Street, Somehwere}}\\
+	\end{aligned}\\[-1cm] $$
+
+
+\thispagestyle{empty}
+\hfill\\[3cm]
+$$\begin{aligned}&\text{\Large{{\textbf{ABOUT}}}}\\\\&\begin{tabular}{?c}$
+\begin{aligned}&\textbf{DAVID FOSTER}\\&\textcolor{gray}{\text{Graphic Designer from New York, USA}}\end{aligned}$\end{tabular}\\&\hspace{1.2em}\begin{minipage} [c][3.8cm][c]{8cm}{This is a section where you describe your professional career. Let the potential employer know why they would want to hire you. Use this section for particular career highlights, collaborations or stepping stones in where you are now as a professional.\\\\
+This is a section where you describe your professional career. Let the potential employer know why they would want to hire you.}\end{minipage}
+\\\\\\&\text{\Large{\textbf{SKILLS}}}\\\\&\hspace{1.25em}\begin{array}{ll}\text{Photoshop}&{\makebox[0pt][l]{\hspace*{0cm}\raisebox{0.3ex}{\rule{3cm}{0.1cm}\textcolor{gray}{\rule{1cm}{0.1cm}}}}}\\\text{Illustrator}&{\makebox[0pt][l]{\hspace*{0cm}\raisebox{0.3ex}{\rule{3.3cm}{0.1cm}\textcolor{gray}{\rule{0.7cm}{0.1cm}}}}}\\
+\text{HTML/CSS}&{\makebox[0pt][l]{\hspace*{0cm}\raisebox{0.3ex}{\rule{2.6cm}{0.1cm}\textcolor{gray}{\rule{1.4cm}{0.1cm}}}}}\\
+\text{PHP}&{\makebox[0pt][l]{\hspace*{0cm}\raisebox{0.3ex}{\rule{1.8cm}{0.1cm}\textcolor{gray}{\rule{2.2cm}{0.1cm}}}}}\\
+\text{UI/UX}&{\makebox[0pt][l]{\hspace*{0cm}\raisebox{0.3ex}{\rule{2.75cm}{0.1cm}\textcolor{gray}{\rule{1.25cm}{0.1cm}}}}}\end{array}
+\\\\\\&\text{\Large{\textbf{AWARDS}}}\\\\&\text{2012}\\\\&\begin{tabular}{?c}$
+\begin{aligned}&\textbf{AWARD TITLE}\\&\textcolor{gray}{\text{Company}}\end{aligned}$\end{tabular}\\&\hspace{1.2em} \text{Brief description of the award you have received from}\\&\hspace{1.2em}\text{company or contest.}\\\\\\&\text{\Large{\textbf{CONTACTS}}}\\\\& \begin{aligned}&\hspace{1.2em}\icon{Phone}\,\,\text{\large{ 660-263-8238}}\\[0.2cm]&
+\hspace{1.2em}\icon{Envelope}\, \text{\large{ info@websiteurl.com}}\\[0.2cm]&
+{\makebox[8.5pt][l]{\hspace{1.2em}\raisebox{-0.3ex}{\icon{Home}}}}\, \hspace{1.2em}\text{\large{ 21 Jump Street, Somehwere}}\\
+	\end{aligned}
+\end{aligned}       \hspace{3.2em}  \begin{aligned}&\text{\Large{\textbf{EDUCATION}}}\\\\&\text{2000}-\text{2014}\\\\&\begin{tabular}{?c}$
+\begin{aligned}&\textbf{COURSE/DIPLOMA NAME}\\&\textcolor{gray}{\text{School/University name}}\end{aligned}$\end{tabular}\\&\hspace{1.2em} \text{Brief description of the course you have studied in the}\\&\hspace{1.2em}\text{school or university}\\\\&\text{1995}-\text{1999}\\\\&\begin{tabular}{?c}$
+\begin{aligned}&\textbf{COURSE/DIPLOMA NAME}\\&\textcolor{gray}{\text{School/University name}}\end{aligned}$\end{tabular}\\&\hspace{1.2em} \text{Brief description of the course you have studied in the}\\&\hspace{1.2em}\text{school or university}\\\\\\&\text{\Large{\textbf{EXPERIENCE}}}\\\\&\text{2014}-\text{Present}\\\\&\begin{tabular}{?c}$
+\begin{aligned}&\textbf{COMPANY NAME}\\&\textcolor{gray}{\text{Position Held}}\end{aligned}$\end{tabular}\\&\hspace{1.2em} \text{Brief description of the position and the responsabilities}\\&\hspace{1.2em}\text{you had in this post Nulhanm pulvinar}\\\\&\text{2012}-\text{2014}\\\\&\begin{tabular}{?c}$
+\begin{aligned}&\textbf{COMPANY NAME}\\&\textcolor{gray}{\text{Position Held}}\end{aligned}$\end{tabular}\\&\hspace{1.2em} \text{Brief description of the position and the responsabilities}\\&\hspace{1.2em}\text{you had in this post Nulhanm pulvinar}\\\\&\text{2010}-\text{2012}\\\\&\begin{tabular}{?c}$
+\begin{aligned}&\textbf{COMPANY NAME}\\&\textcolor{gray}{\text{Position Held}}\end{aligned}$\end{tabular}\\&\hspace{1.2em} \text{Brief description of the position and the responsabilities}\\&\hspace{1.2em}\text{you had in this post Nulhanm pulvinar}\\\\
+\end{aligned}                  $$
+
+
+
+
+\hrule\hfill\\[0.5cm]
+$$\begin{aligned}&\text{\Large{\textbf{REFERENCES}}}\\\\
+&\begin{tabular}{?c}$
+\begin{aligned}&\textbf{Reference Name}\\&\textcolor{gray}{\text{Job Title}}\end{aligned}$\end{tabular}\\&\hspace{1.2em} \text{\textbf{T}: 035 987 6541}\\&\hspace{1.2em}\text{\textbf{E}: info@websiteurl.com}
+\end{aligned} \hspace{10em}\begin{aligned}&\vphantom{\text{\Large{\textbf{REFERENCES}}}}\\\\
+&\begin{tabular}{?c}$
+\begin{aligned}&\textbf{Reference Name}\\&\textcolor{gray}{\text{Job Title}}\end{aligned}$\end{tabular}\\&\hspace{1.2em} \text{\textbf{T}: 035 987 6541}\\&\hspace{1.2em}\text{\textbf{E}: info@websiteurl.com}
+\end{aligned} \hspace{10em}\begin{aligned}&\vphantom{\text{\Large{\textbf{REFERENCES}}}}\\\\
+&\begin{tabular}{?c}$
+\begin{aligned}&\textbf{Reference Name}\\&\textcolor{gray}{\text{Job Title}}\end{aligned}$\end{tabular}\\&\hspace{1.2em} \text{\textbf{T}: 035 987 6541}\\&\hspace{1.2em}\text{\textbf{E}: info@websiteurl.com}
+\end{aligned}  $$
+\end{document}
