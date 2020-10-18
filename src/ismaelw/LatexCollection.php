@@ -1,11 +1,11 @@
 <?php
 
-namespace ismaelw;
+namespace Ismaelw;
 
-use ismaelw\Latex;
-use ismaelw\LatextEmptyCollectionException;
-use ismaelw\LatextException;
-use ismaelw\LatextZipFailedException;
+use Ismaelw\Latex;
+use Ismaelw\LatextEmptyCollectionException;
+use Ismaelw\LatextException;
+use Ismaelw\LatextZipFailedException;
 
 class LatexCollection
 {

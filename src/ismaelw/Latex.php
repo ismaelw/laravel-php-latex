@@ -1,11 +1,11 @@
 <?php
 
-namespace ismaelw;
+namespace Ismaelw;
 
-use ismaelw\LatextException;
-use ismaelw\LatexPdfWasGenerated;
-use ismaelw\LatexPdfFailed;
-use ismaelw\ViewNotFoundException;
+use Ismaelw\LatextException;
+use Ismaelw\LatexPdfWasGenerated;
+use Ismaelw\LatexPdfFailed;
+use Ismaelw\ViewNotFoundException;
 use Symfony\Component\Process\Process;
 use Illuminate\Support\Str;
 

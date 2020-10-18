@@ -1,6 +1,6 @@
 <?php
 
-namespace ismaelw;
+namespace Ismaelw;
 
 class ViewNotFoundException extends \Exception
 {
