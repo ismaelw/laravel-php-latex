@@ -281,6 +281,9 @@ class Latex
         if(\File::exists($tmpfname . '.log')){
             \File::delete($tmpfname . '.log');
         }
+        if(\File::exists($tmpfname . '.out')){
+            \File::delete($tmpfname . '.out');
+        }
 
         return $this;
     }
