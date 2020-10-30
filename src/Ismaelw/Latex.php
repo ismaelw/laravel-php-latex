@@ -272,17 +272,17 @@ class Latex
      */
     private function teardown($tmpfname)
     {
-        if(\File::exists($tmpfname)){
-            \File::delete($tmpfname);
+        if(\File::exists(storage_path('app/temp/') . $tmpfname)){
+            \File::delete(storage_path('app/temp/') . $tmpfname);
         }
-        if(\File::exists($tmpfname . '.aux')){
-            \File::delete($tmpfname . '.aux');
+        if(\File::exists(storage_path('app/temp/') . $tmpfname . '.aux')){
+            \File::delete(storage_path('app/temp/') . $tmpfname . '.aux');
         }
-        if(\File::exists($tmpfname . '.log')){
-            \File::delete($tmpfname . '.log');
+        if(\File::exists(storage_path('app/temp/') . $tmpfname . '.log')){
+            \File::delete(storage_path('app/temp/') . $tmpfname . '.log');
         }
-        if(\File::exists($tmpfname . '.out')){
-            \File::delete($tmpfname . '.out');
+        if(\File::exists(storage_path('app/temp/') . $tmpfname . '.out')){
+            \File::delete(storage_path('app/temp/') . $tmpfname . '.out');
         }
 
         return $this;
