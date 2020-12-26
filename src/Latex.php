@@ -8,6 +8,7 @@ use Ismaelw\LatexPdfFailed;
 use Ismaelw\ViewNotFoundException;
 use Symfony\Component\Process\Process;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\File;
 
 class Latex
 {
@@ -234,8 +235,10 @@ class Latex
      */
     private function generate(){
 
-    	  $fileName = Str::random(10);
-        $tmpfname = tempnam(storage_path('app/temp/'), $fileName);
+    	$fileName = Str::random(10);
+        $basetmpfname = tempnam(storage_path('app/temp/'), $fileName);
+        $tmpfname = preg_replace('/\\.[^.\\s]{3,4}$/', '', $basetmpfname);
+        rename($basetmpfname, $tmpfname);
         $tmpDir = storage_path('app/temp');
         chmod($tmpfname, 0755);
 
@@ -254,7 +257,6 @@ class Latex
         $this->teardown($tmpfname);
 
         register_shutdown_function(function () use ($tmpfname) {
-
             if(\File::exists($tmpfname . '.pdf')){
                 \File::delete($tmpfname . '.pdf');
             }
@@ -272,23 +274,23 @@ class Latex
      */
     private function teardown($tmpfname)
     {
-        if(\File::exists(storage_path('app/temp/') . $tmpfname)){
-            \File::delete(storage_path('app/temp/') . $tmpfname);
-        }
-        if(\File::exists(storage_path('app/temp/') . $tmpfname . '.aux')){
-            \File::delete(storage_path('app/temp/') . $tmpfname . '.aux');
-        }
-        if(\File::exists(storage_path('app/temp/') . $tmpfname . '.log')){
-            \File::delete(storage_path('app/temp/') . $tmpfname . '.log');
-        }
-        if(\File::exists(storage_path('app/temp/') . $tmpfname . '.out')){
-            \File::delete(storage_path('app/temp/') . $tmpfname . '.out');
-        }
+        if(File::exists($tmpfname)) {
+             File::delete($tmpfname);
+         }
+         if(File::exists($tmpfname . '.aux')) {
+             File::delete($tmpfname . '.aux');
+         }
+         if(File::exists($tmpfname . '.log')) {
+             File::delete($tmpfname . '.log');
+         }
+         if(File::exists($tmpfname . '.out')) {
+             File::delete($tmpfname . '.out');
+         }
 
         return $this;
     }
 
-    /**
+	/**
      * Throw error from log gile
      *
      * @param  string $tmpfname
@@ -297,14 +299,13 @@ class Latex
      */
     private function parseError($tmpfname, $process){
 
-    	$logFile = $tmpfname.'.log';
+    	$logFile = $tmpfname . 'log';
 
-    	if(!\File::exists($logFile)){
-
+    	if(!File::exists($logFile)){
     		throw new LatextException($process->getOutput());
     	}
 
-    	$error = \File::get($tmpfname.'.log');
+    	$error = File::get($logFile);
     	throw new LatextException($error);
     }
 }

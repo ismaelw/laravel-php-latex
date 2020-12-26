@@ -11,6 +11,10 @@ The reason to choose LaTex is that, it has extensive features inbuilt have heade
 
 This package makes entire scaffolding using which you can generate, save or download PDF documents.
 
+# IMPORTANT NOTE
+
+I am working on a totally new version of this package. Please use the other one instead and help me with my progress by opening issues for every failure you may find. You can find the new package here: [ismaelw\LaraTeX](https://github.com/ismaelw/laratex)
+
 ## Pre-requisites :
 
 You need to have `texlive-full` program installed on your server. This program has tex packages and language libraries which help you generate documents.
