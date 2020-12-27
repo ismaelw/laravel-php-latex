@@ -13,7 +13,8 @@ This package makes entire scaffolding using which you can generate, save or down
 
 # IMPORTANT NOTE
 
-I am working on a totally new version of this package. Please use the other one instead and help me with my progress by opening issues for every failure you may find. You can find the new package here: [ismaelw\LaraTeX](https://github.com/ismaelw/laratex)
+I was working on a totally new version of this package. Please use the other one. You can find the new package here: [ismaelw\LaraTeX](https://github.com/ismaelw/laratex)
+I'm not going on with the development of this package.
 
 ## Pre-requisites :
 
